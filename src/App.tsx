@@ -1,28 +1,14 @@
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { Header } from "./components/dashboard/Header";
+import { Scene } from "./componentsFor3D/Scene";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <Canvas
-      style={{
-        width: '100vw',
-        height: '100vh',
-        background: '#f0f8ff'
-      }}
-      camera={{
-        fov: 75,
-        near: 0.1,
-        far: 200,
-        position: [10, 4, 10]
-      }}>
-      <OrbitControls makeDefault />
-      <mesh>
-        <sphereGeometry />
-        <meshNormalMaterial wireframe />
-      </mesh>
-    </Canvas>
+    <>
+      <Header />
+      <Scene />
+    </>
   );
 }
 
